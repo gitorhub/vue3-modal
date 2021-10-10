@@ -1,13 +1,13 @@
 <template>
     <div class="overlay" @click.self="data={}" v-if="data.id">
         <div class="modal" >
-            <div class="col-4 modal__img">
+            <div class="modal__img">
                 <a :href="data.image">
                 <img :src="data.image" alt="">
                 </a>
             </div>
-            <div class="col-8 modal__info">
-                <h3>{{data.title}} ({{data.id}})</h3>
+            <div class="modal__info">
+                <h3>{{data.title}} (prodcut id: {{data.id}})</h3>
                 <strong>$ {{data.price}}</strong>
                 <p class="modal__category">{{data.category}}</p>
                 <p>{{data.rating.rate}}/5  (voted by <strong>{{data.rating.count}} </strong> people)</p>
@@ -51,11 +51,9 @@
     width: calc(100% * 8 / 12);
     text-align: left;
     padding: 10px;
-
 }
 .modal__img{
     width: calc(100% * 4 / 12);
-
 }
 .modal__bottom{
     display: flex;
@@ -80,5 +78,4 @@ border-bottom: 1px solid var(--dark);
   align-items: center;
   text-decoration: none;
 }
-
 </style>
